@@ -92,13 +92,13 @@
       handleErrors([error], $('#plot'));
     });
 
-    // Clean up the vega-embed toolbar
+    // Clean up the vega-embed toolbar(change data.tsv to ancom.tsv)
     var toolbar = $('div .vega-actions').detach();
     toolbar.addClass('btn-group');
     toolbar.children('a').each(function() {
       $(this).addClass('btn btn-default');
     });
-    $('<a href="data.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">Export as TSV</a>')
+    $('<a href="ancom.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">Export as TSV</a>')
       .prependTo(toolbar);
     toolbar.appendTo('#toolbar');
 
